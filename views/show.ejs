@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h2><%=dogpark.name%></h2>
+    <img src="<%=dogpark.image%>" alt="">
+    <h4>Address: <%=dogpark.address%></h4>
+    <h4>Phone Number: <%=dogpark.phoneNumber%></h4>
+        <h4>Open Hours: <%= dogpark.hours%></h4>
+        <h4>Rating: <%=dogpark.rating%></h5>
+        <h4 class="comment">Comments: <%= dogpark.comments%></h4>
+        <a href=""><button>Edit</button></a>
+        <form action="">
+            <input type="submit" value="DELETE">
+        </form>
+</body>
+</html>

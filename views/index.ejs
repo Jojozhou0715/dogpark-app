@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dog Park Index Page</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>Dog Park Catalog</h1>
+    <section>
+        <div class="container">
+    <% for(let i = 0; i < dogparks.length; i ++){%>
+        <div class="row">
+        <h3><%= dogparks[i].name %></h3>
+        <a href="/dogpark/<%=dogparks[i].id%>"><img src="<%= dogparks[i].image%>" alt=""></a>
+        <h4>Address: <%=dogparks[i].address%></h4>
+        <h4>Phone Number: <%=dogparks[i].phoneNumber%></h4>
+        <h4>Open Hours: <%= dogparks[i].hours%></h4>
+        <h4>Rating: <%=dogparks[i].rating%></h5>
+        <h4>Comments: <%= dogparks[i].comments%></h4>
+      </div>
+   <% }%>
+   </div>
+    </section>
+</body>
+</html>
