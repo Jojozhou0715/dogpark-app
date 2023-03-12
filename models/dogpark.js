@@ -6,7 +6,7 @@ const dogparkSchema = new mongoose.Schema({
     // description: {type: String, required: true},
     phoneNumber: {type: String, required: true},
     hours: {type: String, required: true},
-    image: {type: String},
+    image: [{type: String}],
     rating: {type: Number, required: true},
     comments: {type: String}
 }, {timestamps: true})

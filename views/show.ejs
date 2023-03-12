@@ -1,21 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Show Page</title>
-    <link rel="stylesheet" href="../css/style.css">
-</head>
+<%- include('../partials/head.ejs')%>
+<%- include('../partials/header.ejs')%>
 <body>
-    <h2><%=dogpark.name%></h2>
-    <img src="<%=dogpark.image%>" alt="">
-    <h4>Address: <%=dogpark.address%></h4>
-    <h4>Phone Number: <%=dogpark.phoneNumber%></h4>
-        <h4>Open Hours: <%= dogpark.hours%></h4>
-        <h4>Rating: <%=dogpark.rating%></h5>
-        <h4 class="comment">Comments: <%= dogpark.comments%></h4>
-        <a href=""><button>Edit</button></a>
-        <form action="">
-            <input type="submit" value="DELETE">
+    <div class="box">
+    <h1 class="parkName"><%=dogpark.name%></h1>
+    <h3><strong>Address:</strong> </h3>
+    <h5><%=dogpark.address%></h5>
+    <h4><strong>Phone Number: </strong></h4>
+    <h5><%=dogpark.phoneNumber%></h5>
+        <h4><strong>Open Hours:</strong></h4>
+        <h5><%= dogpark.hours%></h5>
+        <h4><strong>Rating:</strong></h4>
+            <h5><%=dogpark.rating%></h5>
+        <h4><strong>Comments:</strong></h4>
+        <h5 class="comment"><%= dogpark.comments%></h5>
+        <a href="/dogpark/<%=dogpark.id%>/edit"><button class="editBtn">EDIT</button></a>
+        <form action="/dogpark/<%=dogpark.id%>?_method=DELETE" method="POST">
+            <input class="delBtn" type="submit" value="DELETE">
         </form>
+        <ul>
+            <li class="imgLi">
+                <% dogpark.image.map(img =>{%>
+                 <img src="<%= img%>" id="images">
+              <%})%>
+            </li>
+        </ul>
+        </div>
 </body>
 </html>
