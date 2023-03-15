@@ -1,5 +1,5 @@
-<%- include('../partials/head.ejs')%>
-<%- include('../partials/header.ejs')%>
+<%- include('./partials/head.ejs')%>
+<%- include('./partials/showHeader.ejs')%>
 <body>
     <div class="box">
     <h1 class="parkName"><%=dogpark.name%></h1>
@@ -14,7 +14,7 @@
         <h4><strong>Comments:</strong></h4>
         <h5 class="comment"><%= dogpark.comments%></h5>
         <a href="/dogpark/<%=dogpark.id%>/edit"><button class="editBtn">EDIT</button></a>
-        <form action="/dogpark/<%=dogpark.id%>?_method=DELETE" method="POST">
+        <form class="showForm" action="/dogpark/<%=dogpark.id%>?_method=DELETE" method="POST">
             <input class="delBtn" type="submit" value="DELETE">
         </form>
         <ul>
@@ -25,5 +25,6 @@
             </li>
         </ul>
         </div>
+        <%- include('./partials/footer.ejs')%>
 </body>
 </html>

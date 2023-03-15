@@ -1,21 +1,18 @@
-<%- include('../partials/head.ejs')%>
-<%- include('../partials/header.ejs')%>
+<%- include('./partials/head.ejs')%>
+<%- include('./partials/header.ejs')%>
+
 <body>
     <section>
         <h1 class="showh1">See All Dog Parks</h1>
-        <div class="container">
-           
+        <div class="container">        
     <% for(let i = 0; i < dogparks.length; i ++){%>
         <div class="column">
-            <!-- <div class="imgDiv"> -->
-        <a href="/dogpark/<%=dogparks[i].id%>"><img src="<%= dogparks[i].image[0]%>" alt="" class="imgDiv"></a>
-        <!-- </div> -->
-       
-        <p><a class="nameDiv" href="/dogpark/<%=dogparks[i].id%>"> <%= dogparks[i].name %></a></p>
-        
+        <a href="/dogpark/<%=dogparks[i].id%>"><img src="<%= dogparks[i].image[0]%>" alt="" class="imgDiv"></a> 
+        <p><a class="nameDiv" href="/dogpark/<%=dogparks[i].id%>"> <%= dogparks[i].name %></a></p>  
       </div>   
    <% }%>
    </div>
     </section>
+<%- include('./partials/footer.ejs')%>
 </body>
 </html>

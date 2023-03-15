@@ -1,28 +1,19 @@
-<%- include('../partials/head.ejs')%>
-<header>
-    <div class="newHeader">
-        <div class="buttons">
-             <a href="/dogpark" class="home"><strong>HOME</strong></a>
-             <a href="/dogpark/new"><button class="btn">ADD</button></a>
-             <a href="/dogpark"><img class="logo" src="https://img.freepik.com/free-vector/pet-logo-design-paw-vector-animal-shop-business_53876-136741.jpg?w=996&t=st=1678473159~exp=1678473759~hmac=312bca883ebaa6dd5e7d79fc5945ce9b3b61168bc21b7b247ca8cbf669ec07d5" alt=""></a>
-        </div>
-        <!-- <h1 class="headerh1">DOG PARK CATALOG</h1> -->
-
-    </div>
-</header>
+<%- include('./partials/head.ejs')%>
+<%- include('./partials/newHeader.ejs')%>
 <body>
     <div class="newSection">
     <h1 class="newH1">Add a new dog park</h1>
-    <form action="/dogpark" method="POST">
-       <strong>Name:</strong>  <input type="text" name="name" id="name"><br>
-       <strong>Image:</strong>  <input type="text" name="image" id="image"><br>
-       <strong>Address:</strong>  <input type="text" name="address" id="address"><br>
-       <strong>Phone Number:</strong>  <input type="text" name="phoneNumber" id="phoneNumber"><br>
-       <strong>Open Hours:</strong>  <input type="text" name="hours" id="hours"><br>
-      <strong>Rating:</strong> <input type="text" name="rating" id="rating"><br>
-       <strong>Comments:</strong> <input type="text" name="comments" id="comments"><br>
-        <input type="submit" value="submit">
+    <form action="/dogpark/home" method="POST">
+       <label for="name"><strong>Name:</strong><br><input type="text" name="name" id="name"><br></label>  
+       <label for="image"><strong>Image Link:</strong><br><input type="text" name="image" id="image"><br></label> 
+       <label for="address"><strong>Address:</strong><br><input type="text" name="address" id="address"><br></label>  
+       <label for="phoneNumber"><strong>Phone Number:</strong><br><input type="text" name="phoneNumber" id="phoneNumber"><br></label>   
+       <label for="hours"><strong>Open Hours:</strong><br><input type="text" name="hours" id="hours"><br></label>  
+       <label for="rating"><strong>Rating:</strong><br><input type="text" name="rating" id="rating"><br></label> 
+       <label for="comments"><strong>Comments:</strong><br><input class="commentInput" type="text" name="comments" id="comments"><br></label> 
+       <input class="submit" type="submit" value="SUBMIT"> 
     </form>
 </div>
+<%- include('./partials/newFooter.ejs')%>
 </body>
 </html>

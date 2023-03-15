@@ -7,10 +7,20 @@ const methodOverride = require('method-override')
 const mongoose = require('mongoose')
 const Dogpark = require('./models/dogpark.js')
 const dogparkController = require('./controllers/dogparks.js')
+const usersController = require('./controllers/users.js')
+const session = require('express-session')
 
+//session
+const SESSION_SECRET = process.env.SESSION_SECRET
+console.log(SESSION_SECRET)
+app.use(session({
+    secret: SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
 
 //Database Connection
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URI)
 mongoose.set('strictQuery', false)
 
 //Database connection err/sucess
@@ -28,6 +38,7 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use('/dogpark', dogparkController)
+app.use('/users', usersController)
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port: ${PORT}`)

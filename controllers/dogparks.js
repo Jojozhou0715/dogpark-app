@@ -1,9 +1,12 @@
 const express = require('express')
-const { findOneAndUpdate } = require('../models/dogpark.js')
 const router = express.Router()
 const Dogpark = require('../models/dogpark.js')
 
 router.get('/', (req, res)=>{
+    res.render('login.ejs')
+})
+
+router.get('/home', (req, res)=>{
     Dogpark.find({}, (err, foundDogparks)=>{
         if(err){
             console.log(err.message)
@@ -80,24 +83,25 @@ router.get('/:id/edit', (req, res)=>{
     })
 })
 
-router.post('/', (req, res)=>{
+router.post('/home', (req, res)=>{
+    req.body.image=req.body.image.split(',')
     Dogpark.create(req.body, (err, createdDogpark)=>{
         if(err){
             console.log(err.message)
         }else{
             console.log(createdDogpark)
-            res.redirect('/dogpark')
+            res.redirect('/dogpark/home')
         }
     })
 })
 
 router.put('/:id', (req, res)=>{
-    // req.body.image=req.body.image.split(',');
-    Dogpark.findByIdAndUpdate(req.params.id, req.body, (err, updateDogpark)=>{
+    req.body.image=req.body.image.split(',')
+    Dogpark.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updateDogpark)=>{
         if(err){
             console.log(err.message)
         }else{
-            res.redirect('/dogpark')
+            res.redirect('/dogpark/home')
         }
     })
 })
@@ -107,7 +111,7 @@ router.delete('/:id', (req, res)=>{
         if(err){
             console.log(err.message)
         }else{
-            res.redirect('/dogpark')
+            res.redirect('/dogpark/home')
         }
     })
 })
