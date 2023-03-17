@@ -20,8 +20,11 @@ app.use(session({
 }))
 
 //Database Connection
-mongoose.connect(process.env.DATABASE_URI)
-mongoose.set('strictQuery', false)
+const MONGODB_URI = process.env.DATABASE_URI
+mongoose.set('strictQuery', true)
+mongoose.connect(MONGODB_URI, {
+    useNewUrlParser: false,
+})
 
 //Database connection err/sucess
 //Define callback functions for various events
