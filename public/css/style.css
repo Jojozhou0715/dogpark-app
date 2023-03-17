@@ -243,7 +243,7 @@ img {
     border: none;
     border-radius: 1.2rem;
     /* background-color: #d06733; */
-    color: #f5f7f6;
+    color: white;
     height: 40px;
     width: 80px;
     left: 23px;
@@ -257,7 +257,7 @@ img {
     border: none;
     border-radius: 1.2rem;
     /* background-color: #d06733; */
-    color:#f5f7f6;
+    color:white;
     height: 40px;
     width: 103px;
     font-weight: 600;
