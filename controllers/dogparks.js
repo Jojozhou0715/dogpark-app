@@ -52,7 +52,34 @@ router.get('/seed', (req, res)=>{
             image: ['https://patch.com/img/cdn20/getty/22969720/20180724/030000/styles/raw/public/processed_images/gettyimages-692181782-1532458785-2673.jpg?width=1200', 'https://images.squarespace-cdn.com/content/v1/578ce34be6f2e1b4d3ce5045/1469025470195-HOJNSABBNFIUSWVFKM8I/image-asset.jpeg?format=2500w', 'https://cityoflakewood.us/wp-content/uploads/2018/10/DOG_PARK-3.jpg'],
             rating: 4.5,
             comments: "Great dog park with lots of room for the pups. Easy parking close by. The water wasnt working so I would bring a water bottle for your pup."
-         }
+         },
+         {
+            name:  'Riverside Park South Dog Run',
+            address: 'Hudson River Greenway, New York, NY 10069',
+            phoneNumber: '212-639-9675',
+            hours: '9:00 am - 9:00 pm',
+            image: ['https://humaneheroes.org/wp-content/uploads/2019/09/txhh_best-practices-when-taking-dog-park.png', 'https://www.cesarsway.com/wp-content/uploads/2015/06/Cesars-dog-park-tips.jpg.webp', 'https://www.palmspringsca.gov/home/showpublishedimage/29939/637340404770470000'],
+            rating: 4.5,
+            comments: 'Generally a good crowd of dogs and owners, and is kept clean.'
+         },
+         {
+             name:  'Bull Moose Dog Run',
+             address: 'Hoyt Avenue S &, 24th St, 11102',
+             phoneNumber: '917-699-8976',
+             hours: '9:00 am - 9:00 pm',
+             image: [ 'https://images.ctfassets.net/sfnkq8lmu5d7/qrhLckJhHmbfBQvcmXLp5/3ea60b549346f532f1da3b769f0bb7ee/2022-05-02_How_to_Create_a_Dog_Park_in_Your_Neighborhood_AdobeStock_63759354.jpg?w=1000&h=750&q=70&fm=webp', 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F47%2F2021%2F04%2F20%2Fdogs-playing-at-dog-park-1210828938-2000.jpg', 'https://www.grandrapidsmi.gov/files/assets/public/departments/parks-and-recreation/images/park-pictures/dog-park.jpg?w=1080'],
+             rating: 4.6,
+             comments: 'Best dog park in the area because of the owners and the community. Has had some great upgrades since Ive last been there!'
+          },
+          {
+             name:  'Stuyvesant Park Dog Run',
+             address: 'P2M8+4C, New York, NY 10003',
+             phoneNumber: '212-639-9675',
+             hours: '9:00 am - 9:00 pm',
+             image: ['https://cityoflakewood.us/wp-content/uploads/2018/10/DOG_PARK-3.jpg','https://www.aacounty.org/sebin/n/m/dogpark.jpg', 'https://images.squarespace-cdn.com/content/v1/578ce34be6f2e1b4d3ce5045/1469025470195-HOJNSABBNFIUSWVFKM8I/image-asset.jpeg?format=2500w'],
+             rating: 4.5,
+             comments: "Great dog park with lots of room for the pups. Easy parking close by. The water wasnt working so I would bring a water bottle for your pup."
+          }
 
     ])
 } )
