@@ -42,6 +42,9 @@ app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'))
 app.use('/dogpark', dogparkController)
 app.use('/users', usersController)
+app.get('/', (req, res)=>{
+    res.redirect('/dogpark')
+})
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port: ${PORT}`)
