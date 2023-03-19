@@ -34,7 +34,8 @@ router.post('/register', (req, res)=>{
                 }else{
                 console.log(createdUser)
                 req.session.currentUser = createdUser
-                res.redirect('/dogpark/home')
+                // res.redirect('/dogpark/home')
+                res.render('users/signin.ejs')
             }
             })
         }
